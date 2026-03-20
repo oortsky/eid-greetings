@@ -166,7 +166,7 @@ export default function App() {
   const id = searchParams.get("id");
   const greeting = greetings.find(g => g.id === id) ?? greetings[0];
 
-  const fadeUp = delay => ({
+  const fadeUp = (delay: number) => ({
     opacity: visible ? 1 : 0,
     transform: visible ? "translateY(0)" : "translateY(16px)",
     transition: `opacity 0.8s ease ${delay}s, transform 0.8s ease ${delay}s`
